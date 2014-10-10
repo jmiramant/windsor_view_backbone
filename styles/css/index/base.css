@@ -1,0 +1,98 @@
+/* line 1, styles/sass/index/base.sass */
+#head {
+  background-image: url("../../assets/splash_page/slider/dc_smaller.jpg");
+  background-size: cover;
+}
+
+/* line 7, styles/sass/index/base.sass */
+.login .square h1 {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: "Lobster Two", cursive;
+  font-font: bold;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 0px;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* line 20, styles/sass/index/base.sass */
+.login .square:hover h1 {
+  background: #eb4141;
+}
+/* line 22, styles/sass/index/base.sass */
+.login .button {
+  padding: 0px;
+  border: 0px;
+}
+
+/* line 27, styles/sass/index/base.sass */
+.themed-background-twitter {
+  background-color: #55acee;
+}
+
+/* line 29, styles/sass/index/base.sass */
+.themed-background-facebook {
+  background-color: #3b5999;
+}
+
+/* line 31, styles/sass/index/base.sass */
+.themed-background-tumblr {
+  background-color: #35465c;
+}
+
+/* line 33, styles/sass/index/base.sass */
+.themed-background-email {
+  background-color: #3369e8;
+}
+
+/* line 35, styles/sass/index/base.sass */
+.venntooltip {
+  position: absolute;
+  text-align: center;
+  width: 128px;
+  height: 18px;
+  background: #333333;
+  color: #dddddd;
+  border: 0px;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+/* line 46, styles/sass/index/base.sass */
+#social_profiles_map {
+  width: 800px;
+  height: 500px;
+}
+
+/* line 50, styles/sass/index/base.sass */
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+/* line 57, styles/sass/index/base.sass */
+.info h4 {
+  margin: 0 0 5px;
+  color: #777777;
+}
+
+/* line 61, styles/sass/index/base.sass */
+.legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555555;
+}
+/* line 65, styles/sass/index/base.sass */
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}

@@ -1,0 +1,4 @@
+define [
+  'cs!routers/indexRouter'
+], ->
+

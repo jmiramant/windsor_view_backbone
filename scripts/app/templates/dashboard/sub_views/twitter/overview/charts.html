@@ -1,0 +1,248 @@
+  <div class="row">
+    <div class="col-md-12">
+      <div class="widget">
+        <div class="widget-extra themed-background-twitter">
+          <h3 class="widget-content-light"><i class="fa fa-twitter"></i> Twitter</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block ">
+    <h4 class="sub-header">Total Impact of Your Twitter Users</h4>
+    <div class="row">
+      <div class="col-sm-3">
+
+        <div class="block">
+          <div class="block-title text-center themed-background-twitter">
+            <h3 style="color:white;"><strong>Twitter Profiles</strong></h3>
+          </div>
+          <div class="widget-extra-full text-center">
+            <h2><strong>{{formatNum num_twitter_profiles}}</strong></h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+
+        <div class="block">
+          <div class="block-title text-center themed-background-twitter">
+            <h3 style="color:white;"><strong>Lifetime Tweets</strong></h3>
+          </div>
+          <div class="widget-extra-full text-center">
+            <h2><strong>{{formatNum lifetime_tweets}}</strong></h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+
+        <div class="block">
+          <div class="block-title themed-background-twitter text-center">
+            <h3 style="color:white;"><strong>Total Followers</strong></h3><strong>
+          </strong></div><strong>
+          <div class="widget-extra-full text-center">
+            <h2><strong>{{formatNum total_followers}}</strong></h2>
+          </div>
+        </strong></div>
+      </strong></div><strong>
+      <div class="col-sm-3">
+
+        <div class="block">
+          <div class="block-title text-center themed-background-twitter">
+            <h3 style="color:white;"><strong>Total Lists</strong></h3>
+          </div>
+          <div class="widget-extra-full text-center">
+            <h2><strong>{{formatNum total_lists}}</strong></h2>
+          </div>
+        </div>
+      </div>
+    </strong></div>
+    <h4 class="sub-header">General Statistics About Your Twitter Users</h4>
+  </strong>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="block">
+        <div class="block-title text-center themed-background-twitter">
+          <h3 style="color:white;" <strong=""><strong>Users with More Than 50 Followers</strong></h3>
+        </div>
+        <div class="widget-extra-full text-center">
+          <h2><strong>{{formatNum fifty_plus_followers}}</strong></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+
+      <div class="block">
+        <div class="block-title text-center themed-background-twitter">
+          <h3 style="color:white;"><strong>Users Active within 6 Months</strong></h3>
+        </div>
+        <div class="widget-extra-full text-center">
+          <h2><strong>{{formatNum active_within_180_days}}</strong></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+
+      <div class="block">
+        <div class="block-title text-center themed-background-twitter">
+          <h3 style="color:white;"><strong>Average Number of Followers</strong></h3>
+        </div>
+        <div class="widget-extra-full text-center">
+          <h2><strong>{{twoDec avg_num_followers}}</strong></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4 class="sub-header">Exceptional Twitter Profiles</h4>
+  <div class="row">
+    <div class="col-sm-4">
+
+      <div class="block">
+        <div class="block-title text-center themed-background-twitter">
+          <h3 style="color:white;"><strong>Largest Number of Followers</strong></h3>
+        </div>
+        <div class="widget-extra-full text-center">
+          <h2><strong>{{formatNum max_followers}}</strong></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+
+      <div class="block">
+        <div class="block-title text-center themed-background-twitter">
+          <h3 style="color:white;"><strong>Max Public Lists a Single User is on</strong></h3>
+        </div>
+        <div class="widget-extra-full text-center">
+          <h2><strong>{{formatNum max_lists}}</strong></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+
+      <div class="block">
+        <div class="block-title text-center themed-background-twitter">
+          <h3 style="color:white;"><strong>Users with Verified Profiles<br></strong></h3>
+        </div>
+        <div class="widget-extra-full text-center">
+          <h2><strong>{{formatNum total_verified_users}}</strong></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="widget">
+      <div class="widget-advanced">
+        <div class="widget-header text-center themed-background-twitter">
+          <h3 class="widget-content-light">
+            Most Followers<br>
+            <small>Users with the Most Followers</small>
+          </h3>
+        </div>
+        <div class="widget-main">
+          <a href="#" class="widget-image-container animation-bigEntrance">
+            <span class="widget-icon themed-background-twitter"><i class="gi gi-group"></i></span>
+          </a>
+          <div class="table-responsive">
+            <table id="most_followed_table" class="table table-striped table-vcenter table-condensed table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">Rank</th>
+                  <th class="text-center"><i class="si si-twitter"></i></th>
+                  <th class="text-center">Followers</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each this.most_followers_chart}}
+                <tr>
+                  <td class="text-center">{{increment @index}}</td>
+
+                  <td class="text-center"><a href="{{url}}" target="_blank">{{screen_name}}</a></td>
+
+                  <td class="text-center">{{statuses_count}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center"><a href="#" id="twitter_profiles_menu" class='js-navigate-twitter-profile'>Show all..</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="widget">
+      <div class="widget-advanced">
+        <div class="widget-header text-center themed-background-twitter">
+          <h3 class="widget-content-light">
+            Most Listed<br>
+            <small>Users on the Most Public Lists</small>
+          </h3>
+        </div>
+        <div class="widget-main">
+          <a href="#" class="widget-image-container animation-bigEntrance">
+            <span class="widget-icon themed-background-twitter"><i class="gi gi-list"></i></span>
+          </a>
+          <div class="table-responsive">
+            <table id="most_listed_table" class="table table-striped table-vcenter table-condensed table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">Rank</th>
+                  <th class="text-center"><i class="si si-twitter"></i></th>
+                  <th class="text-center">Lists</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each this.most_lists_chart}}
+                <tr>
+                  <td class="text-center">{{increment @index}}</td>
+                  <td class="text-center"><a href="{{url}}" target="_blank">{{screen_name}}</a></td>
+                  <td class="text-center">{{statuses_count}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center"><a href="#" id="twitter_profiles_menu" class='js-navigate-twitter-profile'>Show all..</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="widget">
+      <div class="widget-advanced">
+        <div class="widget-header text-center themed-background-twitter">
+          <h3 class="widget-content-light">
+            Most Active<br>
+            <small>Top Lifetime Tweets Among Users</small>
+          </h3>
+        </div>
+        <div class="widget-main">
+          <a href="javascript:void(0)" class="widget-image-container animation-bigEntrance">
+            <span class="widget-icon themed-background-twitter"><i class="gi gi-electricity"></i></span>
+          </a>
+          <div class="table-responsive">
+            <table id="most_active_table" class="table table-striped table-vcenter table-condensed table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">Rank</th>
+                  <th class="text-center"><i class="si si-twitter"></i></th>
+                  <th class="text-center">Tweets</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each this.most_active_chart}}
+                <tr>
+                  <td class="text-center">{{increment @index}}</td>
+                  <td class="text-center"><a href="{{url}}" target="_blank">{{screen_name}}</a></td>
+                  <td class="text-center">{{statuses_count}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center"><a href="#" id="twitter_profiles_menu" class='js-navigate-twitter-profile'>Show all..</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

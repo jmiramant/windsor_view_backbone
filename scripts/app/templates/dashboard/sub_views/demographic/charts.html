@@ -1,0 +1,41 @@
+  <div class="row">
+    <div class="col-md-12">
+      <div class="block">
+        <div class="block-title">
+          <h2>Gender Breakdown</h2>
+        </div>
+        <div id="malefemale">
+          <svg style="height:500px;width:400px"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="block">
+        <div class="block-title">
+          <h2>Age Distribution</h2>
+        </div>
+        <div id="age_histogram">
+          <svg style="height:400px;width:1000px"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="block">
+        <div class="block-title">
+          <h2>Photo Book</h2>
+        </div>
+        <div class='photo_book_loader'>
+          <td class="text-center"><i class="fa fa-spinner fa-4x fa-spin"></i></td>
+        </div>
+        <div id="photo_book" style='display: none'>
+          {{#each this.profile_images}}
+            <img src="{{this}}">
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>

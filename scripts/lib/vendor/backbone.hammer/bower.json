@@ -1,0 +1,11 @@
+{
+  "name": "backbone.hammer",
+  "version": "0.2.0",
+  "main": "backbone.hammer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test"
+  ]
+}

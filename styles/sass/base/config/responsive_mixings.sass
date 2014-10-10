@@ -1,0 +1,33 @@
+$r-units: 'rem'
+$r-breakpoints: 'mobile', 'phablet', 'tablet', 'laptop', 'desktop'
+
+@function r-resize($value, $to, $from: 'mobile')
+  $hash: (mobile: 1, phablet: 1.1, tablet: 1.3, laptop: 1.5, desktop: 1.8)
+  @return unquote($value) * map-get($hash, $to) / map-get($hash, $from)
+
+@mixin r-breakpoint($point)
+  @if $point == 'desktop'
+    @include min-screen(70rem)
+      @content
+  @else if $point == 'laptop'
+    @include min-screen(64rem)
+      @content
+  @else if $point == 'tablet'
+    @include min-screen(50rem)
+      @content
+  @else if $point == 'phablet'
+    @include min-screen(32rem)
+      @content
+  @else if $point == 'mobileonly'
+    @include max-screen(32rem)
+      @content
+
+@mixin r-transition($key)
+  @include transition(unquote($key) 0.5s ease-in-out)
+
+@mixin r-size($key, $value)
+  @include r-transition($key)
+  #{$key}: #{$value}#{$r-units}
+  @each $breakpoint in $r-breakpoints
+    @include r-breakpoint($breakpoint)
+      #{$key}: #{r-resize($value, $breakpoint)}#{$r-units}

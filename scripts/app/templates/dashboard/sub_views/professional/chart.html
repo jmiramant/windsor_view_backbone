@@ -1,0 +1,32 @@
+<div class="block-title">
+	<h2>Professional Overview</h2>
+</div>
+<strong>
+<div class="table-responsive">
+	<table id="li_summary_table" class="table table-vcenter table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th class="text-center"><i class="si si-linked_in"></i></th>
+				<th>Profile URL</th>
+				<th class="text-center">Profile Summary</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th class="text-center"><i class="si si-linked_in"></i></th>
+				<th>Profile URL</th>
+				<th class="text-center">Profile Summary</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			{{#each this.li_profiles}}
+			<tr>
+				<td><a href="{{ this.url }}" target="_blank">{{ this.name }}</a></td>
+				<td>{{ this.url }}</td>
+				<td>{{ this.bio }}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+</strong>

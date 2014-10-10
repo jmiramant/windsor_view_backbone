@@ -1,0 +1,52 @@
+    <div class="block-title">
+      <h2>Profile Directory</h2>
+    </div>
+    <strong>
+    <div class="table-responsive">
+      <table id="customers_table" class="table table-vcenter table-condensed table-bordered" > <!--class="display" cellspacing="0" width="100%">-->
+        <thead>
+          <tr>
+            <th class="text-center"><i class="gi gi-user"></i></th>
+            <th>Profile URL</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Year Joined</th>
+            <th class="text-center">Twitter Followers</th>
+            <th class="text-center">Following</th>
+            <th class="text-center">Ratio</th>
+            <th class="text-center">Tweets</th>
+            <th class="text-center">Lists</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class="text-center"><i class="gi gi-user"></i></th>
+            <th>Profile URL</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Year Joined</th>
+            <th class="text-center">Twitter Followers</th>
+            <th class="text-center">Following</th>
+            <th class="text-center">Ratio</th>
+            <th class="text-center">Tweets</th>
+            <th class="text-center">Lists</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {{#each twitter_stats}}
+          <tr class={{setClass}}>
+          <td>{{#verifiedIcon}}<i class="fa fa-check-circle"></i>{{/verifiedIcon}}
+              {{#contributorsIcon}}<i class="fa fa-exclamation-circle"></i>{{/contributorsIcon}}
+            <a href="{{ this.url }}" target="_blank">{{ this.name }}</a></td>
+            <td>{{ this.url }}</td>
+            <td>{{ this.description }}</td>
+            <td class="text-center">{{ this.created_year }}</td>
+            <td class="text-center">{{ this.followers_count }}</td>
+            <td class="text-center">{{ this.friends_count }}</td>
+            <td class="text-center">{{ ratio }}</td>
+            <td class="text-center">{{ this.statuses_count }}</td>
+            <td class="text-center">{{ this.listed_count }}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    </strong>

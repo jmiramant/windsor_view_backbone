@@ -1,0 +1,49 @@
+<div class="block">
+    <!-- Example Title -->
+    <div class="block-title">
+      <h2>Emails Distribution Across the United States</h2>
+    </div>
+    <div id='social_profiles_map'></div>
+</div>
+<!-- END Example Block -->
+<div class="block">
+
+  <div class="block-title">
+    <h2>Emails Found by State</h2>
+  </div>
+  <strong>
+  <div class="table-responsive">
+    <table id="states_table" class="table table-vcenter table-condensed table-bordered">
+      <thead>
+        <tr>
+          <th class="text-center">State</th>
+          <th class="text-center">Number of Profiles</th>
+        </tr>
+      </thead>
+      <tbody>
+       {{#each this.state_counts_list}}
+       <tr role="row" class="even">
+        <td class="text-center">{{this.state}}</td>
+        <td class="text-center sorting_1">{{this.count}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th class="text-center">State</th>
+        <th class="text-center">Number of Profiles</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+</div>
+</strong>
+<!-- END Example Block -->
+<div class="block">
+  <!-- Example Title -->
+  <div class="block-title">
+    <h2>Social Influence by State</h2>
+  </div>
+  <p>Coming Soon!</p>
+</div>

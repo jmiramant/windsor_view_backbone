@@ -1,0 +1,115 @@
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget">
+					<div class="widget-extra themed-background-email">
+						<h3 class="widget-content-light">Email Analysis - <strong>{{processed}}</strong> Emails Processed</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<div class="block-title"><h1>Email Summary</h1></div>
+					<div class="row" style='margin-bottom: 20px'>
+						<div class="col-md-6">
+							<div class="block">
+								<div class="block-title">
+									<h2>Emails by Top Level Domains</h2>
+								</div>
+								<div id="email_pie_chart_1">
+									<svg style="width:500px; height:500px;"></svg>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="block">
+								<div class="block-title">
+									<h2>Emails by Provider</h2>
+								</div>
+								<div id="email_pie_chart_2">
+									<svg style="width:500px; height:500px;"></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style='margin-top: 20px;'>
+			<div class="col-md-12">
+				<div class="widget">
+					<div class="widget-extra themed-background-email">
+						<h3 class="widget-content-light">Social Network Footprint from Emails</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="block">
+
+			<div class="block-title">
+				<h1>Transforming Emails into Social</h1>
+			</div>
+
+			<div class="row" style='margin-bottom: 20px;'>
+				<div class="col-sm-4">
+					<div class="block" style='margin-bottom: 0'>
+						<div class="block-title text-center themed-background-email">
+							<h3 style="color:white;"><strong>Percent Emails with Data</strong></h3>
+						</div>
+						<div class="widget-extra-full text-center">
+							<h2><strong>{{percent_emails_with_data}}</strong></h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="block">
+						<div class="block-title text-center themed-background-email">
+							<h3 style="color:white;"><strong>Average Social Profiles Per Email</strong></h3>
+						</div>
+						<div class="widget-extra-full text-center">
+							<h2><strong>{{avgProfiles}}</strong></h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="block">
+						<div class="block-title themed-background-email text-center">
+							<h3 style="color:white;"><strong>Social Networks Covered</strong></h3><strong>
+						</strong></div><strong>
+						<div class="widget-extra-full text-center">
+							<h2><strong>{{num_social_networks}}</strong></h2>
+						</div>
+					</strong></div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="block">
+					<div class="block-title">
+						<h2>Distribution of Social Profiles</h2>
+					</div>
+					<div id='chart' class="nvd3">
+						<svg style='height:400px; width:100%;'></svg>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="block">
+					<div class="block-title">
+						<h2>Gender Breakdown</h2>
+					</div>
+					<div id="malefemale">
+						<svg style='height:400px;width:100%'></svg>
+					</div>
+				</div>
+			</div>
+		</div>
